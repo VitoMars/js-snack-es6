@@ -19,10 +19,6 @@ const bici = [
    },
 ];
 
-// const element = bici[i];
-// const { peso } = bici;
-// console.log(peso);
-
 let pesoMinore = Number.POSITIVE_INFINITY;
 let nomeMinore = "";
 
