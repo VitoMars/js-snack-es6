@@ -20,17 +20,19 @@ const bici = [
 
 let pesoMinore = Number.POSITIVE_INFINITY;
 let nomeMinore = "";
+let objMinore;
 
 for (let i = 0; i < bici.length; i++) {
-   const variabile = bici[i];
-   const { peso } = variabile;
-
    let tmp = bici[i].peso;
    if (tmp < pesoMinore) {
       pesoMinore = tmp;
       nomeMinore = bici[i].nome;
+      objMinore = bici[i];
    }
 }
+
+const { peso } = objMinore;
+console.log(peso);
 
 console.log(`La bici piu' leggera e' ${nomeMinore} con peso ${pesoMinore}`);
 
@@ -39,6 +41,7 @@ console.log(`La bici piu' leggera e' ${nomeMinore} con peso ${pesoMinore}`);
 const getPesoMinore = (array) => {
    let pesoMinore = Number.POSITIVE_INFINITY;
    let nomeMinore = "";
+   let objMinore;
 
    for (let i = 0; i < bici.length; i++) {
       let tmp = bici[i].peso;
